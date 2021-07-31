@@ -1,4 +1,4 @@
-## miniSheetDBv2
+## miniSheetDB v2
 
 Pustaka untuk [Google Apps Script (GAS)](https://www.google.com/script/start/) yang memberdayakan [Google Spreadsheet](https://docs.google.com/spreadsheets/?usp=mkt_sheets) menjadikan seolah-olah sebagai database aplikasi.
 
@@ -31,7 +31,7 @@ Hasil dari `v2` ini tidak kompatible dengan `v1`, meskipun secara syntax memilik
 
 ```javascript
 var ssid = 'idsheet';
-var db = new miniSheetDBv2(ssid);
+var db = new miniSheetDB2.init(ssid);
 
 function getAll() {
     let result = db.getAll();
@@ -67,7 +67,7 @@ function getKey() {
 
 ```javascript
 var ssid = 'https://docs.google.com/spreadsheets/d/1B8JSBXqV0sIFZsuwDHQ8wOADFIAxgB7WDpJRh1JUei8/edit';
-var db = new miniSheetDBv2(ssid, 'Sheet1', {    
+var db = new miniSheetDB2.init(ssid, 'Sheet1', {    
     col_length: 5,
     row_start: 2,
     json: true
@@ -84,7 +84,7 @@ db.col_length = 10;
 
 ### Method
 
-Berikut list method, accessor, maupun field / tipe yang berada dalam class **miniSheetDBv2**.
+Berikut list method, accessor, maupun field / tipe yang berada dalam class **miniSheetDB2**.
 
 | **Method**  | **Params**               | **Keterangan**                                                                                                                                                                                                 |
 | ----------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
