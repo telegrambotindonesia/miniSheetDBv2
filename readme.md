@@ -61,7 +61,7 @@ function getKey() {
 | `col_start`   | `number`   | 1           | sheet kolom dimulai                                                                                                                                                                                       |
 | `col_length`  | `number`   | 2           | rentang sheet panjang kolom                                                                                                                                                                                       |
 | `row_start`   | `number`   | 1           | baris dimulainya pemrosesan sheet                                                                                                                                                                                      |
-| `json`         | `boolean`  | `false`       | Secara default (spreadsheet), hasil method `getAll` adalah bertipe Array. Maka, jika options `json` diisi `true` hasilnya akan diubah menjadi bertipe json. <br /><br />Konsekuensi nya adalah:<br /><br /> <ul><li>Key kosong diubah menjadi key bernilai `__@__`</li><li>Value yang dipakai adalah value yang ditemukan oleh key paling akhir</li></ul>  |
+| `json`         | `boolean`  | `false`       | Secara default (spreadsheet), hasil method `getAll` adalah bertipe Array. Maka, jika options `json` diisi `true` hasilnya akan diubah menjadi bertipe json. <br /><br />Konsekuensi nya adalah:<br /><br /> <ul><li>Key kosong diubah menjadi key bernilai `___`</li><li>Value yang dipakai adalah value yang ditemukan oleh key paling akhir</li></ul>  |
 
 #### Contoh Pemakaian:
 
@@ -241,7 +241,7 @@ Untuk mendapatkan semua data sheet aktif:
 var resArray = db.getAll();
 
 // untuk tipe JSON
-// key kosong diubah __@__ 
+// key kosong diubah ___
 // jika key sama, data terakhir akan menimpa
 var resJSON = db.getAll(true);
 ```
