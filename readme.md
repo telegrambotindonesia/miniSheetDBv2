@@ -299,7 +299,7 @@ db.range('A1:B1').setTextStyle(style);
 ## Kontribusi
 
 - Silakan di fork dan pull request
-- Ada masalah atau saran pengembangan? silakan buat issue baru.
+- Ada masalah atau saran pengembangan? silakan buat [issue baru](https://github.com/telegrambotindonesia/miniSheetDBv2/issues).
 
 [range]: https://developers.google.com/apps-script/reference/spreadsheet/range
 [spreadsheet]: https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet
