@@ -344,6 +344,15 @@ Menghasilkan jangkuan data yang telah dipakai.
 vat dataRange = db.data_range; // misal: A1:E217
 ```
 
+### Checkbox
+
+Ref: [checkbox](https://developers.google.com/apps-script/reference/spreadsheet/range#insertcheckboxes)
+
+```javascript
+vat result = db.range('A1').insertCheckboxes();
+vat result = db.range('A1').insertCheckboxes('yes');
+```
+
 ### Style
 
 ```javascript
