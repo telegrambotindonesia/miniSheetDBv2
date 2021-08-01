@@ -82,6 +82,32 @@ class DB {
         if (arguments.length == 4) return sheet.getRange(arguments[0], arguments[1], arguments[2], arguments[3]);
     }
 
+    errorMessage(message, more = {}) {
+        return {
+            status: false,
+            message,
+            ...more
+        }
+    }
+
+    add(...args) {
+        let len = this.col_length;
+
+        if (args.length < 1) return this.errorMessage('empty');
+        let data;
+        // add([1,2])
+        if (this.check(args[0]) == 'array') {
+            if (args[0].length !== len) return this.errorMessage('Array length must ' + len, { len: args[0].length, data: args[0] });
+            data = [args[0]];
+        } else {
+            if (args.length !== len) return this.errorMessage('Arguments length must ' + len, { len: args.length, data: args });
+            data = [[...args]];
+        }
+
+        return this.setValues(this.last_row + 1, this.col_start, 1, this.col_length, data);
+
+    }
+
     getValue(...args) {
         if (arguments.length < 1 || args.length > 2) return false;
 

@@ -97,6 +97,7 @@ Berikut list method, accessor, maupun field / tipe yang berada dalam class **min
 | `last_row`   | -                         | Mendapatkan posisi terakhir baris sheet                                                                                                                                                                        |
 | `data_range` | - | Mendapatkan data range dalam A1Notation
 | `range()`     | a1Notation, kolom, baris | Mendapatkan pointer range untuk pengolahan selanjutnya. <br />Cek method-method pada [range]  |
+| `add(data)` | `array` atau `data` | Menambahkan data. |
 | `getValue()`  | a1Notation, kolom, baris | mendapatkan isi suatu range                                                                                                                                                                                    |
 | `getValues()` | a1Notation, kolom, baris | mendapatkan isi suatu range secara massal                                                                                                                                                                      |
 | `setValue()`  | a1Notation, kolom, baris | mengisi nilai suatu range                                                                                                                                                                                      |
@@ -107,9 +108,44 @@ Berikut list method, accessor, maupun field / tipe yang berada dalam class **min
 | `search()`    | `String` atau `regexp`          | pencarian berdasarkan key menggunakan string atau reguler expression                                                                                                                                           |
 | `searchAll()`    | `String` atau `regexp`          | pencarian jamak berdasarkan key, jika ketemu akan tetep dilanjutkan ke field berikutnya                                                                                                                                      |
 
-## Detail
+## Penjelasan Detail
 
-Penjelasan detail dan disertai berbagai contoh.
+Penjelasan detail untuk beberapa method penting dan beberapa kasus, disertai berbagai contoh.
+
+### add
+
+Menambahkan data.
+
+```javascript
+var db = new miniSheetDB2.init('a1b2c3');
+
+// add with array type
+var result = db.add(['kunci', 'isi']);
+// or normal methode
+var result = db.add('kunci', 'isi');
+```
+
+Contoh lain jika panjang kolom berbeda:
+
+```javascript
+var db = new miniSheetDB2.init('a1b2c3', 'Sheet1', { col_length: 3 });
+
+// add with array type
+var data = ['kunci', 'isi 1', 'isi 2'];
+var result = db.add(data);
+// or normal methode
+var result = db.add('kunci', 'isi 1', 'isi 2');
+```
+
+Akan error jika panjang kolom tidak sesuai dengan data:
+
+```javascript
+var db = new miniSheetDB2.init('a1b2c3', 'Sheet1', { col_length: 3 });
+
+// ERROR :
+var result = db.add('kunci', 'isi 1', 'isi 2', 'isi 3', 'isi 4'); // len = 5
+```
+
 
 ### key
 
