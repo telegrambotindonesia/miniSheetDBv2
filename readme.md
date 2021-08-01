@@ -294,6 +294,32 @@ db.app.insertSheet('Sheet Baru');
 db.app.insertSheet('Sheet Baru Paling Depan', 0);
 ```
 
+### Hapus
+
+Ref: [deleteRow](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#deleterowrowposition)
+
+Menghapus baris (row) :
+
+```javascript
+// hapus baris 2
+db.sheet.deleteRow(2);
+
+// hapus 5 baris sekaligus dimulai dari baris ke 2
+db.sheet.deleteRow(2, 5);
+```
+
+Hapus baris pada posisi yang ditemukan
+
+```javascript
+// cari key
+var hasil = db.key('id');
+if (hasil) {
+    // hapus baris ditempat key ditemukan
+    db.sheet.deleteRow(hasil.row);
+}
+```
+
+
 ### Clear
 
 Membersihkan range .
