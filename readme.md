@@ -321,7 +321,7 @@ if (hasil) {
 }
 ```
 
-> v2.3
+> v2.4
 
 ```js
 var hasil = db.del('id');

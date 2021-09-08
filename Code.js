@@ -13,7 +13,7 @@
 * Grup Telegram @botindonesia
 */
 
-var version = '2.3.0';
+var version = '2.4.0';
 
 class DB {
     constructor(id, tab = 0, options = {}) {
