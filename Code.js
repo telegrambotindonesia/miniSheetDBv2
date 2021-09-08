@@ -13,6 +13,8 @@
 * Grup Telegram @botindonesia
 */
 
+var version = '2.3.0';
+
 class DB {
     constructor(id, tab = 0, options = {}) {
         this.options = options;
@@ -29,6 +31,7 @@ class DB {
         this.row_start = options.row_start || 1;
         // this.row_length = options.row_length || false;
 
+        this.versi = version;
         this.init();
     }
 
@@ -40,6 +43,10 @@ class DB {
 
         this.app = app;
         this.sheet = this.check(tab) == 'string' ? app.getSheetByName(tab) : app.getSheets()[tab];
+    }
+
+    get version() {
+        return this.versi;
     }
 
     get type() {
@@ -200,6 +207,12 @@ class DB {
         }
     }
 
+    del(id) {
+        let r = this.key(id);
+        if (r) return this.sheet.deleteRow(r.row);
+        return false;
+    }
+
     // keys(1);
     // keys([1,2,3]);
     keys(ids) {
@@ -227,7 +240,7 @@ class DB {
         let data = this.getAll(true);
         if (!data) return false;
 
-        let regex = this.check(key) === 'regexp' ? key : new RegExp(key, 'gi');
+        let regex = this.check(key) === 'regexp' ? key : new RegExp(key, 'mi');
 
         var result = stop ? false : [];
         let found = false;

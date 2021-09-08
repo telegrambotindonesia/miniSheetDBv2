@@ -95,6 +95,8 @@ Berikut list method, accessor, maupun field / tipe yang berada dalam class **min
 | `name`        | -                | mendapatkan nama sheet (title) dari tab yang saat ini dipakai                                                                                                                                                  |
 | `sheet`       | -                | Pointer utama pengoperasian sheet.<br />Cek method-method pada [spreadsheet] |
 | `last_row`   | -                         | Mendapatkan posisi terakhir baris sheet                                                                                                                                                                        |
+| `versi` | - | informasi versi library
+| `version` | - | alias dari versi
 | `data_range` | - | Mendapatkan data range dalam A1Notation
 | `range()`     | a1Notation, kolom, baris | Mendapatkan pointer range untuk pengolahan selanjutnya. <br />Cek method-method pada [range]  |
 | `add(data)` | `array` atau `data` | Menambahkan data. |
@@ -317,6 +319,12 @@ if (hasil) {
     // hapus baris ditempat key ditemukan
     db.sheet.deleteRow(hasil.row);
 }
+```
+
+> v2.3
+
+```js
+var hasil = db.del('id');
 ```
 
 
