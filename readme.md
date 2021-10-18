@@ -4,6 +4,11 @@ Pustaka untuk [Google Apps Script (GAS)](https://www.google.com/script/start/) y
 
 Ini adalah penerus dari versi lama [miniSheetDB v1](https://github.com/banghasan/minisheetdb) yang mana proyek yang awalnya berada pada repository pribadi [bangHasan](https://github.com/banghasan) sekarang dialihkan menjadi repository organisasi.
 
+
+### Update
+
+Untuk mendapatkan notifikasi update di Telegram [@GASIndonesia](https://t.me/GASindonesia)
+
 ### Keuntungan
 
 - Secara umum syntax tidak jauh berbeda dengan `miniSheetDB v1`
