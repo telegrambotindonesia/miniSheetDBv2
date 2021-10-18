@@ -344,6 +344,36 @@ db.range('A1:B1').clearFormat();
 db.range('A1:B1').clearContent();
 ```
 
+### Find Text
+
+Method baru di rilis `v2.5`
+
+Berfungsi untuk mencari suatu text atau pola tertentu.
+
+> Tidak direkomendasikan untuk data spreadsheet yang besar.
+karena akan jadi lemot.
+
+- Syntax: `findText(text, regex = false, ...ranges)`
+- Hasil: berupa array, Notasi A1.
+
+Contoh: 
+
+```js
+// menemukan nama Andi pada sheet aktif
+db.findText('andi');
+
+// menemukan nama Andi pada kolom A
+db.findText('andi', false, 'A1:A');
+
+// menemukan nama yang berawalan huruf A pada kolom A
+// menggunakan regex
+db.findText('^A', true, 'A1:A');
+
+// menemukan nama berawalan huruf A, menggunakan regex
+// pada area range 1,1,3,10 (A1:C10)
+db.findText('^A', true, 1, 1, 3, 10);
+```
+
 ### Data Range
 
 Menghasilkan jangkuan data yang telah dipakai.

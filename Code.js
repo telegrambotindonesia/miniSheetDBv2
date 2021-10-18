@@ -13,7 +13,7 @@
 * Grup Telegram @botindonesia
 */
 
-var version = '2.4.0';
+var version = '2.5.0';
 
 class DB {
     constructor(id, tab = 0, options = {}) {
@@ -265,6 +265,22 @@ class DB {
 
     searchAll(key) {
         return this.search(key, false);
+    }
+
+    /*  result: ranges
+        tipe 1: findText('anu')
+        tipe 2: findText('anu', boolean[regex])
+        tipe 2: findText('anu', boolean[regex], range)
+    */
+    findText(text, regex = false, ...ranges) {
+        let r = (arguments.length > 2) ? ranges : [this.data_range];
+        let ranges_result = this.sheet
+            .getRange(...r)
+            .createTextFinder(text)
+            .useRegularExpression(regex)
+            .findAll()
+            .map((r) => r.getA1Notation());
+        return ranges_result;
     }
 
     // get type of variable
