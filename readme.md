@@ -73,7 +73,10 @@ function getKey() {
 #### Contoh Pemakaian:
 
 ```javascript
+var ssid = '1B8JSBXqV0sIFZsuwDHQ8wOADFIAxgB7WDpJRh1JUei8';
+// atau:
 var ssid = 'https://docs.google.com/spreadsheets/d/1B8JSBXqV0sIFZsuwDHQ8wOADFIAxgB7WDpJRh1JUei8/edit';
+
 var db = new miniSheetDB2.init(ssid, 'Sheet1', {    
     col_length: 5,
     row_start: 2,
