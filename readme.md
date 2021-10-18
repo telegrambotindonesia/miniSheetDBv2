@@ -354,9 +354,15 @@ db.range('A1:B1').clearFormat();
 db.range('A1:B1').clearContent();
 ```
 
-### Find Text
+### findText
 
-Method baru di rilis `v2.5`
+Tersedia di release: `v2.5`
+
+Ref:
+
+- [text finder](https://developers.google.com/apps-script/reference/spreadsheet/text-finder)
+- [blog bangHasan](https://banghasan.com/post/2021/10/18/gas-spreadsheet-mencari-text/)
+
 
 Berfungsi untuk mencari suatu text atau pola tertentu.
 
