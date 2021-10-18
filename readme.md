@@ -1,5 +1,7 @@
 ## miniSheetDB v2
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/telegrambotindonesia/miniSheetDBv2) ![Visits Badge](https://badges.pufler.dev/visits/telegrambotindonesia/miniSheetDBv2) ![updates](https://badges.pufler.dev/updated/telegrambotindonesia/miniSheetDBv2) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/telegrambotindonesia/miniSheetDBv2) ![Lines of code](https://img.shields.io/tokei/lines/github/telegrambotindonesia/miniSheetDBv2) ![lang count](https://img.shields.io/github/languages/count/telegrambotindonesia/miniSheetDBv2) ![javascript](https://img.shields.io/badge/lang-javascript-yellow) ![GitHub issues](https://img.shields.io/github/issues/telegrambotindonesia/miniSheetDBv2) ![GitHub contributors](https://img.shields.io/github/contributors/telegrambotindonesia/miniSheetDBv2) ![telegram botindonesia](https://img.shields.io/badge/telegram-@botindonesia-blue)
+
 Pustaka untuk [Google Apps Script (GAS)](https://www.google.com/script/start/) yang memberdayakan [Google Spreadsheet](https://docs.google.com/spreadsheets/?usp=mkt_sheets) menjadikan seolah-olah sebagai database aplikasi.
 
 Ini adalah penerus dari versi lama [miniSheetDB v1](https://github.com/banghasan/minisheetdb) yang mana proyek yang awalnya berada pada repository pribadi [bangHasan](https://github.com/banghasan) sekarang dialihkan menjadi repository organisasi.
